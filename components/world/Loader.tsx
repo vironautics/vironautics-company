@@ -73,7 +73,7 @@ export default function Loader() {
         new Promise<void>((res) => {
           const img = new Image();
           img.onload = img.onerror = () => res();
-          img.src = "/logo.png";
+          img.src = "/logo.svg";
         }),
       ),
     );

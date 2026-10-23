@@ -42,7 +42,7 @@ swoosh in the mark) — use it for structure, never as decoration. One metaphor 
 
 ## 4. Visual Identity
 
-**Logo:** `public/logo.png` — horizontal wordmark, gradient electric-blue → navy,
+**Logo:** `public/logo.svg` — horizontal wordmark, gradient electric-blue → navy,
 with an ascending swoosh terminating in an arrow and an orbital dot on the "A".
 
 | Rule | Spec |
