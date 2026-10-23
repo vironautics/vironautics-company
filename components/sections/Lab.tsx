@@ -106,7 +106,11 @@ export default function Lab() {
           <ul className="mt-14 border-b border-line">
             {LAB.products.map((p, i) => (
               <li key={p.name} data-product className="group border-t border-line">
-                <div className="flex items-baseline justify-between gap-6 py-7 transition-[padding] duration-[var(--dur-base)] ease-[var(--ease-out)] group-hover:pl-3">
+                <a
+                  href={p.href}
+                  {...(p.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="flex items-baseline justify-between gap-6 py-7 transition-[padding] duration-[var(--dur-base)] ease-[var(--ease-out)] group-hover:pl-3"
+                >
                   <div className="min-w-0">
                     <p className="vn-mono mb-2 text-muted">
                       0{i + 1} / {p.kind}
@@ -124,7 +128,7 @@ export default function Lab() {
                     aria-hidden="true"
                     className="shrink-0 text-subtle transition-all duration-[var(--dur-base)] ease-[var(--ease-out)] group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-signal"
                   />
-                </div>
+                </a>
               </li>
             ))}
           </ul>

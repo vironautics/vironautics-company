@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
-import { ArrowRight, Mail, MapPin } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Mail, MapPin } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Logo from "@/components/ui/Logo";
 import { CONTACT, NAV_LINKS } from "@/lib/content";
@@ -149,6 +149,20 @@ export default function Contact() {
                   </a>
                 </dd>
               </div>
+              <div>
+                <dt className="vn-mono text-subtle">Network</dt>
+                <dd className="mt-1">
+                  <a
+                    href={CONTACT.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-8 items-center gap-2.5 font-mono text-[0.95rem] text-foreground underline decoration-line-strong decoration-1 underline-offset-4 transition-colors hover:text-signal"
+                  >
+                    <ArrowUpRight size={15} strokeWidth={1.5} aria-hidden="true" className="text-signal" />
+                    LinkedIn / vironautics
+                  </a>
+                </dd>
+              </div>
             </dl>
           </aside>
         </div>
@@ -172,6 +186,16 @@ export default function Contact() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href={CONTACT.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="vn-mono inline-flex min-h-8 items-center text-muted transition-colors hover:text-signal"
+                >
+                  LinkedIn
+                </a>
+              </li>
             </ul>
           </nav>
           <p className="vn-mono text-subtle sm:text-right">

@@ -5,6 +5,7 @@ import Capabilities from "@/components/sections/Capabilities";
 import Contact from "@/components/sections/Contact";
 import Hero from "@/components/sections/Hero";
 import Lab from "@/components/sections/Lab";
+import Projects from "@/components/sections/Projects";
 import Manifesto from "@/components/sections/Manifesto";
 import Mission from "@/components/sections/Mission";
 import Reach from "@/components/sections/Reach";
@@ -32,6 +33,7 @@ export default function Home() {
 
       <main id="main" className="relative z-[var(--z-content)]">
         <Hero />
+        <Projects />
         <Manifesto />
         <Capabilities />
         <Mission />

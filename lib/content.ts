@@ -3,9 +3,9 @@
  *
  * Voice (docs/brand-guidelines.md): a claim, then the mechanism. No buzzwords.
  *
- * PLACEHOLDERS — replace before launch: every figure in REACH.stats, the
- * product names/metrics in LAB.products, and the contact email are
- * illustrative, not real company data.
+ * PLACEHOLDERS — replace before launch: every figure in REACH.stats and the
+ * contact email are illustrative. LAB.products are our real products; review
+ * their short descriptions.
  *
  * Photography is Pexels (free licence, no attribution required); every id was
  * resolved against the CDN. All images get the same duotone + scanline
@@ -17,6 +17,7 @@ export function pexels(id: number, width = 1600): string {
 }
 
 export const NAV_LINKS = [
+  { href: "#projects", label: "Projects" },
   { href: "#capabilities", label: "Capabilities" },
   { href: "#mission", label: "Method" },
   { href: "#lab", label: "AI & Products" },
@@ -202,19 +203,34 @@ export const LAB = {
   title: "Intelligence you can ship. Products we run.",
   products: [
     {
-      name: "Orbit",
-      kind: "Operations suite",
-      body: "Projects, resourcing and billing for service companies — one timeline from signed proposal to paid invoice.",
+      name: "TN Business",
+      kind: "Business platform",
+      body: "A Tunisian business platform, designed, built and run by our crew.",
+      href: "https://tnbusiness.tn",
     },
     {
-      name: "Beacon",
-      kind: "Marketing intelligence",
-      body: "Ad, CRM and product data unified into one attribution model, so spend decisions stop being argued from screenshots.",
+      name: "KeeperPass",
+      kind: "Password manager",
+      body: "Open-source password manager that encrypts your vault in the browser and stores it in your own Google Drive or Dropbox — no KeeperPass server holds your data.",
+      href: "https://keeperpass.com",
     },
     {
-      name: "Copilot Core",
-      kind: "AI enablement",
-      body: "The retrieval, evaluation and guardrail layer we drop into products to take an AI feature from demo to production.",
+      name: "Becha",
+      kind: "Web product",
+      body: "A Tunisian product built in-house and operated under real customer load.",
+      href: "https://becha.tn",
+    },
+    {
+      name: "PostyDaily",
+      kind: "Social media management",
+      body: "Schedule, publish and analyse posts across Instagram, LinkedIn, Facebook and more from one dashboard, with a content calendar and team collaboration.",
+      href: "https://postydaily.com",
+    },
+    {
+      name: "Professional Email",
+      kind: "Service",
+      body: "Want email on your own domain (you@yourcompany.com)? We set up and manage professional mailboxes for you.",
+      href: "#contact",
     },
   ],
   terminal: {
@@ -260,7 +276,51 @@ export const CONTACT = {
   title: "Bring us the hard problem.",
   body: "Tell us the outcome you need. You get a scoped proposal with a fixed first milestone within 48 hours — no discovery invoice attached.",
   email: "hello@vironautics.com",
+  linkedin: "https://www.linkedin.com/company/vironautics",
   address: "Sousse, Tunisia",
   coords: "35.8256° N, 10.6084° E",
   timezone: "Africa/Tunis",
+} as const;
+
+export const PROJECTS = {
+  eyebrow: "Projects",
+  title: "Products we built and run.",
+  items: [
+    {
+      name: "TN Business",
+      kind: "Online shop builder",
+      body: "Launch your own online shop in a day. Cash on delivery from the first order, 0% commission, no card to start.",
+      href: "https://tnbusiness.tn",
+      image: "/projects/tnbusiness.png",
+      alt: "TN Business homepage showing a storefront preview",
+    },
+    {
+      name: "KeeperPass",
+      kind: "Password manager",
+      body: "Open-source password manager. Your vault is encrypted in the browser and saved in your own Google Drive or Dropbox.",
+      href: "https://keeperpass.com",
+      image: "/projects/keeperpass.png",
+      alt: "KeeperPass homepage showing an encrypted vault",
+    },
+    {
+      name: "PostyDaily",
+      kind: "Social media management",
+      body: "Schedule, publish and analyse posts across your social accounts from one dashboard.",
+      href: "https://postydaily.com",
+      image: "/projects/postydaily.png",
+      alt: "PostyDaily homepage",
+    },
+    {
+      name: "Becha",
+      kind: "Web product",
+      body: "A Tunisian product built and operated by our crew.",
+      href: "https://becha.tn",
+      image: null,
+      alt: "",
+    },
+  ],
+  email: {
+    title: "Professional email on your own domain",
+    body: "Need you@yourcompany.com? We set up and manage business mailboxes for any client domain.",
+  },
 } as const;
